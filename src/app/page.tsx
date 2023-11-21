@@ -95,10 +95,12 @@ export default function Home() {
 
   return (
     <main>
-      <header className='flex items-center justify-center bg-cyan-600 h-52'>
+      <header className='flex items-center justify-center flex-col gap-10 bg-cyan-600 h-52'>
         <p className='text-white text-4xl uppercase font-extrabold animate-pulse'>
           Amigo secreto do cabare
         </p>
+
+        <p className='text-white font-extrabold animate-bounce'>By Lucas Berce de Jesus</p>
       </header>
 
       {!chosenParticipant && Cookies.get('sessionExpired') !== 'true' && (
