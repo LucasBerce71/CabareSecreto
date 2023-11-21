@@ -47,8 +47,6 @@ export default function Home() {
   };
 
   const randomParticipant = () => {
-    if (Cookies.get('sessionExpired') === 'true') return;
-
     const participantIndex = Math.floor(Math.random() * participants.length);
 
     if (participants[participantIndex].isExpired) return;
@@ -61,8 +59,6 @@ export default function Home() {
     }
 
     fetchUpdateUser(participants[participantIndex].id, newParticipantData);
-
-    Cookies.set('sessionExpired', 'true');
   };
 
   React.useEffect(() => {
@@ -103,7 +99,7 @@ export default function Home() {
         <p className='text-white font-extrabold animate-bounce'>By Lucas Berce de Jesus</p>
       </header>
 
-      {!chosenParticipant && Cookies.get('sessionExpired') !== 'true' && (
+      {!chosenParticipant && (
         <section className='flex items-center justify-center mt-[15rem]'>
           <button className='bg-cyan-800 p-5 rounded-md animate-bounce' onClick={randomParticipant}>
             <p className='text-white uppercase font-3xl font-extrabold'>
