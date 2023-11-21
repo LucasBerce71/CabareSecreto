@@ -80,13 +80,13 @@ export default function Home() {
         return Victor;
       case '3':
         return Nery;
-      case '4':
+      case '6':
         return Belo;
       case '7':
         return Isadora;
       case '8':
         return Sumaya;
-      case '9':
+      case '10':
         return Bruna;
       case '11':
         return Jana;
