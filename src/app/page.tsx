@@ -81,18 +81,12 @@ export default function Home() {
       case '3':
         return Nery;
       case '4':
-        return Joao;
-      case '5':
-        return Matheusinho;
-      case '6':
         return Belo;
       case '7':
         return Isadora;
       case '8':
         return Sumaya;
       case '9':
-        return Ana;
-      case '10':
         return Bruna;
       case '11':
         return Jana;
